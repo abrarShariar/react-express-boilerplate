@@ -3,10 +3,25 @@ const express = require('express'),
 
 router.get('/', (req, res, next) => {
   res.json({
-    id: 1,
-    name: 'Abrar',
-    skills: ['C++', 'JavaScript', 'Go', 'Python']
+    title: 'Hello World'
   })
 });
+
+router.get('/users', (req, res, next) => {
+  res.json([
+    {
+      id: 1,
+      name: 'Abrar'
+    },
+    {
+      id: 2,
+      name: 'Shariar'
+    },
+    {
+      id: 3,
+      name: 'Asad'
+    }
+  ])
+})
 
 module.exports = router;
